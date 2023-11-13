@@ -1,0 +1,396 @@
+/* give some default propriety to all tag and soon on */
+* {
+    /* outline: 1px solid black; */
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+}
+
+/* utility */
+/* disable style of all link tag */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* give a deafault background color */
+body {
+    background: #b5b5b5;
+}
+
+/* creat a div which delete the float propriety */
+.nofloat {
+    clear: both;
+}
+
+/* class which use to give somme space to a div so it can see and not go under the navbar fixed */
+.under_bar {
+    padding: 6em 2em 1em 2em;
+}
+
+/* class for a specif paraghrap in the home page */
+.under_bar_p {
+    padding-top: .5em;
+    text-align: center;
+}
+
+/* color the navbar's name page on which you are */
+#current {
+    color: #7300ff !important;
+}
+
+/* navbar */
+/* navbar fixed over tha page so it remain on top */
+#navbar {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1em;
+    height: 4em;
+    background: #000000;
+}
+
+/* put at center the title */
+#navbar h1 {
+    padding-left: .5em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: #9d00ff;
+}
+
+/* change the title style */
+#navbar a:hover h1 {
+    font-style: oblique;
+    color: #fff !important;
+    transition: ease .5s;
+}
+
+/* put the link near each other */
+#navbar ul {
+    font-size: 1.5em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    padding-right: 1em;
+}
+
+/* put in center the text */
+#navbar ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: #9d00ff;
+    font-weight: 600;
+}
+
+/* animation of navbar's link */
+#navbar ul a:hover li {
+    color: #7300ff;
+    font-size: 1.2em;
+    transition: ease 1s;
+}
+
+
+/* home page */
+/* center all sub title */
+.sub_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* div that contain three different mini content about site */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2em;
+}
+
+/* resest a line height */
+.container * {
+    line-height: 1.1;
+}
+
+/* three mini contet with a preview */
+.preview {
+    opacity: 70%;
+    float: left;
+    width: 28%;
+    margin: 1em 1em 4em 0;
+    padding: 1em;
+    background: #ffffff;
+    min-height: 39em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* evidence on which div the curso is */
+.preview:hover {
+    color: #404040 !important;
+    font-weight: 700 !important;
+    font-size: 1.1em;
+    box-shadow: 0 .3em 2.5em -.6em #00000091;
+    transition: all 0.5s ease 0s;
+    margin-bottom: 6em;
+    opacity: 100%;
+}
+
+/* deafult option for the image in this page */
+.preview img {
+    width: 100%;
+    padding: 1em 0;
+    height: 18.5em;
+}
+
+/* reset the deafault height of hover image */
+.preview:hover img {
+    height: auto;
+}
+
+/* create a nice hover link */
+.link_pre {
+    font-size: 1em;
+    background-image: linear-gradient(45deg, transparent 50%, #000000 50%);
+    background-position: 25%;
+    background-size: 400%;
+    transition: background 500ms ease-in-out, color 500ms ease-in-out;
+    width: 40%;
+}
+
+/* show a background which it was "hidden" */
+.link_pre:hover {
+    padding: 0.6em 2.3em;
+    color: #ffffff;
+    background-position: 100%;
+}
+
+/* myself page */
+/* default width for all this timeline */
+.timeline img{
+    width: 70%;
+}
+
+/* container of all timeline */
+.timeline ul {
+    background: #2f0c56;
+    padding-bottom: 4em;
+}
+
+/* create a middle vertical line */
+.timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 0.6em;
+    margin: 0 auto;
+    padding-top: 3.1em;
+    background: #f8bbd0;
+}
+
+/* create a circle as big point */
+.timeline ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 50%;
+    background: inherit;
+}
+
+/* put a div in specific postition */
+.timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 25em;
+    padding: .9em;
+    color: #fff;
+    background: #00838f;
+    background: #4129a0;
+}
+
+/* create a mini arrow */
+.timeline ul li div::before {
+    content: "";
+    position: absolute;
+    bottom: .43em;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* select all div in odd list item */
+.timeline ul li:nth-child(odd) div {
+    left: 2.8em;
+}
+
+/* give position of mini arrow */
+.timeline ul li:nth-child(odd) div::before {
+    left: -.9em;
+    border-width: .5em 1em .5em 0;
+    border-color: transparent #00838f transparent transparent;
+    border-color: transparent #4129a0 transparent transparent;
+}
+
+/* select all div in even list item */
+.timeline ul li:nth-child(even) div {
+    left: -29em;
+}
+
+/* given position of mini arrow */
+.timeline ul li:nth-child(even) div::before {
+    right: -.9em;
+    border-width: .5em 0 .5em 1em;
+    border-color: transparent transparent transparent #00838f;
+    border-color: transparent transparent transparent #4129a0;
+}
+
+/* blockinng the data */
+time {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+/* effect */
+.timeline ul li::after {
+    transition: background 0.5s ease-in-out;
+}
+
+/* effect when he was on screen */
+.timeline ul li.in-view::after {
+    background: #00838f;
+    background: #4129a0;
+}
+
+/* hidden div untill it will become "in-view" */
+.timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+/* give animation all div in odd list item */
+.timeline ul li:nth-child(odd) div {
+    transform: translate3d(12.5em, 0, 0);
+}
+
+/* give animation all div in even list item */
+.timeline ul li:nth-child(even) div {
+    transform: translate3d(-12.5em, 0, 0);
+}
+
+/* give opacity to all div when they are on screen */
+.timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* hobby page */
+/* flexing div to put photo and text near each other and a box-shadow */
+.hobby_post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2em 2em 4em 2em;
+    background: #fff;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: -0.6em -0.5em #232323, 0.5em 1em 0.4em #7300ff;
+}
+
+/* default width and border radius to all image in this page */
+.hobby_post .hobby_img {
+    width: 35%;
+    border-radius: 4em;
+}
+
+/* defaul width to all text in this page to give some space between image and itself */
+.hobby_text {
+    width: 60%;
+}
+
+/* Dremas' page */
+/* give the full dimension of the page to html, body and the big div which contain all content of the page */
+.dream {
+    height: 100%;
+}
+
+/* give full heigh of the page of div which contain text */
+.dream_post {
+    height: 100%;
+    line-height: 1.5;
+}
+
+/* create a div with background fixed so it remain when scrolling the page */
+.dream_fixed {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* a sort of opacity to the text */
+.dream_text {
+    color: #000000;
+    padding: 1em;
+    background: #ffffff99;
+    font-size: large;
+}
+
+/* div to seperate two different background image */
+.dream_pause {
+    background-color: transparent;
+    height: 2em;
+}
+
+/* background for the first div */
+.one {
+    background-image: url(./img/img-dream_bike.jpeg);
+}
+
+/* background for the second div */
+.two {
+    background-image: url(./img/img-dream_ball.jpeg);
+}
+
+/* background for the third div */
+.three {
+    background-image: url(./img/img-dream_hacker.png);
+}
+
+/* footer */
+/* footer fixed so it remain always on the screen */
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* background: #808080; */
+    background: #000;
+    color: #fff;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

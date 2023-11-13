@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/fav-about.png" type="image/x-icon">
+</head>
+<body>
+    <!-- navbar -->
+    <nav id="navbar">
+        <a href="index.html"><h1>My WebSite</h1></a>
+        <ul>
+            <a href="about.html"><li id="current">Who I am</li></a>
+            <a href="hobby.html"><li>Hobbies</li></a>
+            <a href="dreams.html"><li>Dreams</li></a>
+        </ul>
+    </nav>
+
+    <!-- content -->
+    <div class="under_bar" style="background: #f8bbd0; padding-top: 5em;">
+        <h2 class="sub_title">My own timeline</h2>
+    </div>
+    <!-- start of timeline -->
+    <section class="timeline">
+        <ul>
+            <!-- I was born -->
+            <li>
+                <div>
+                    <time>2004</time>
+                    <img src="img/img-mebaby.JPG"/>
+                    <br>
+                    <p class="about_text">
+                        On February 18, 2004 I was born in Turin at the <i>"Sant'Anna"</i> hospital at 10.45 pm
+                    </p>
+                </div>
+            </li>
+
+            <!-- nursery's years -->
+            <li>
+                <div>
+                    <time>2007 - 2010</time>
+                    <img src="img/img-nursery.JPG"/>
+                    <br>
+                    <p class="about_text">
+                        During these years I went to the nursery called <i>"Tetti Francesi"</i> and I decided to start playing football
+                    </p>
+                </div>
+            </li>
+
+            <!-- primary school Turin -->
+            <li>
+                <div>
+                    <time>2010 - 2012</time>
+                    <img src="img/img-pry_school_TO.jpg"/>
+                    <br>
+                    <p class="about_text">
+                        I started my first years of primary school in Rivalta, where I lived until June 2012 because then later...
+                    </p>
+                </div>
+            </li>
+
+            <!-- primary school Como -->
+            <li>
+                <div>
+                    <time>2012 - 2015</time>
+                    <img src="img/img-tennis.JPG"/>
+                    <br>
+                    <p class="about_text">
+                        ...I had to move to Como due to my dad's job, so I continued primary school here in Como, where I still live, at the <i>"Francesco Baracca"</i> school. Once I arrived in Como I wanted to try some new sports so, in addition to playing football in the <i>"Cittadella ASD"</i> team, I also started playing tennis at the <i>"Villa Olmo"</i> sports center
+                    </p>
+                </div>
+            </li>
+
+            <!-- middle school -->
+            <li>
+                <div>
+                    <time>2015 - 2018</time>
+                    <img src="img/img-ACC.jpg"/>
+                    <img src="img/img-ACR.jpeg"/>
+                    <br>
+                    <p class="about_text">
+                        I think these were the best years I've lived so far: the teenage years. Personally, I appreciated every single day because it was in these years that, while attending the <i>"Giuseppe Parini"</i> middle school, I met many teenagers with whom I have maintained relationships up until today, and with some of them I still go out togheter. Furthermore, in 2015, I decided to leave tennis and continue my football "career". For the first time I was bought by a new team, the "Accademia Calcio Como", 2016, and after one year I was called by "A.C. Renate"
+                    </p>
+                </div>
+            </li>
+
+            <!-- high school -->
+            <li>
+                <div>
+                    <time>2018 - 2023</time>
+                    <img src="img/img-bike_2.jpg"/>
+                    <br>
+                    <p class="about_text">
+                        These were the years of <i>"Paolo Giovo"</i> High School and Covid.  Although I could not experience them fully, I must admit that they were five wonderful and important years because they helped me grow and mature a lot. During these years I met many boys and girls and realized what the word friendship means and how it is enough to have a few but true friends instead of having a thousand but no one to talk to when you need them.  Meanwhile, my football career was continuing in the best of ways. Stop... I was forgetting that I bought the motorbike
+                    </p>
+                </div>
+            </li>
+
+            <!-- nowadays -->
+            <li>
+                <div>
+                    <time>2023 - Today</time>
+                    <img src="img/img-ACRV.jpg"/>
+                    <br>
+                    <p class="about_text">
+                        I recently started university at USI in Switzerland and I am attending the Bachelor of Informatics because I have always had a great passion for technology. Furthermore, over the years, curiosity has increased as to how applications, video games, phones and soon on are capable of reacting based on certain inputs, which is why I chose to become a computer scientist. Sorry, I was forgetting to tell you that I also won the Primavera 3 championship and the Italian scudetto, in other words I am Italian Primaver 3 Champion 2022/2023
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">&copy; Simone Maccario - Software Atelier I - 2023</footer>
+
+    <!-- script for the animation of timeline giving the class "in-view" to the div which is on the screen and if there is some action recall the fuction -->
+    <script>
+    (function() {
+        'use strict';
+        // define variables
+        var items = document.querySelectorAll(".timeline li");
+
+        // check if an element is in viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                if (isElementInViewport(items[i])) {
+                items[i].classList.add("in-view");
+                }
+            }
+        }
+
+        // listen for events
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+    })();
+    </script>
+</body>
+</html>
