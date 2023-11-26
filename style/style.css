@@ -366,17 +366,17 @@ time {
 
 /* background for the first div */
 .one {
-    background-image: url(./img/img-dream_bike.jpeg);
+    background-image: url(../img/img-dream_bike.jpeg);
 }
 
 /* background for the second div */
 .two {
-    background-image: url(./img/img-dream_ball.jpeg);
+    background-image: url(../img/img-dream_ball.jpeg);
 }
 
 /* background for the third div */
 .three {
-    background-image: url(./img/img-dream_hacker.png);
+    background-image: url(../img/img-dream_hacker.png);
 }
 
 /* footer */
